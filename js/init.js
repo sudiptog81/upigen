@@ -55,7 +55,7 @@ const init = () => {
   const [upi, name, paytm] = getQueryParams();
 
   if (!((upi && name) || paytm)) {
-    navigateToLink('/generator.html');
+    navigateToLink('generator.html');
     return;
   }
 
@@ -88,7 +88,7 @@ const init = () => {
   else if (paytm) {
     if (!paytm.match(/[0-9]{10}/)) {
       alert("Not a Valid Number!");
-      navigateToLink('/generator.html');
+      navigateToLink('generator.html');
       return;
     }
 
