@@ -16,7 +16,7 @@ const createDeeplink = (upi, name, paytm) => {
   if (upi) {
     const org = Math.floor(Math.random() * 1e5) + 1;
 
-    link = `gpay://upi/pay?pa=${upi}&pn=${name}&mc=0000&mode=02&purpose=00&orgid=${org}`;
+    link = `upi://pay?pa=${upi}&pn=${name}&tn=upigen`;
 
     // if (iOS()) {
     //   link = `gpay://upi/pay?pa=${upi}&pn=${name}&mc=0000&mode=02&purpose=00&orgid=${org}`;
