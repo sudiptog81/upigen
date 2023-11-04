@@ -64,7 +64,7 @@ const handleSubmit = (e, t) => {
     const v = document.querySelector('input[name=\'upi\']').value;
     const na = document.querySelector('input[name=\'name\']').value;
 
-    const li = `${window.location.protocol}://${window.location.host}/?upi=${v}&name=${encodeURI(na)}`;
+    const li = `${window.location.protocol}//${window.location.host}/?upi=${v}&name=${encodeURI(na)}`;
       fetch(`https://is.gd/create.php?format=json&url=${encodeURIComponent(li)}`)
         .then((d) => d.json())
         .then((_d) => setLink(_d.shorturl))
@@ -79,7 +79,7 @@ const handleSubmit = (e, t) => {
       return;
     }
 
-    const li = `${window.location.protocol}://${window.location.host}/?paytm=${n}`;
+    const li = `${window.location.protocol}//${window.location.host}/?paytm=${n}`;
       fetch(`https://is.gd/create.php?format=json&url=${encodeURIComponent(li)}`)
         .then((d) => d.json())
         .then((_d) => setLink(_d.shorturl))
